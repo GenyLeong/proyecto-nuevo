@@ -1,0 +1,19 @@
+@import "./utilities.scss";
+
+@mixin margin($mt, $mr, $mb, $ml){
+	margin:{
+		top:$mt;
+		bottom:$mb;
+		right:$mr;
+		left:$ml;
+	}
+}
+
+@mixin padding($pt, $pr, $pb, $pl){
+	padding:{
+		top:$pt;
+		bottom:$pb;
+		right:$pr;
+		left:$pl;
+	}
+}
