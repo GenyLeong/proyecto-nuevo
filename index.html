@@ -29,7 +29,7 @@
   <meta name="MobileOptimized" content="width">
   <meta name="HandheldFriendly" content="true">
   <link rel="shortcut icon" href="http://prod.static.larepublica.pe/assets/images/larepublica/content/default/favicon.ico" type="image/vnd.microsoft.icon"/>
-  <link rel="stylesheet" type="text/css" href="static/css/main.min.css">
+  <link rel="stylesheet" type="text/css" href="static/css/main.css">
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
   <link href='http://api.tiles.mapbox.com/mapbox-gl-js/v0.37.0/mapbox-gl.css' rel='stylesheet' />
@@ -37,18 +37,17 @@
 
 <body>
   <div id="particles-js">
-    <h1 class="title">hola bola</h1>
     <span class="social-bar-lr">
-        <a class="ws-icon" href="whatsapp://send?text=http://larepublica.pe/data/pecados-imperdonables/?ref=whp"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
-        <a class="tw-icon popup" href="https://twitter.com/share?text=Víctimas de abuso sexual por parte de sacerdotes católicos narran sus testimonios. %23PecadosImperdonables" data-via="larepublica_pe"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
-        <a class="fb-share-button fb-icon popup-fb" href="javascript: void(0);" data-layout="button_count">
-                <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
-        </a>
+      <a class="ws-icon" href="whatsapp://send?text=http://larepublica.pe/data/pecados-imperdonables/?ref=whp"><i class="fa fa-whatsapp fa-2x" aria-hidden="true"></i></a>
+      <a class="tw-icon popup" href="https://twitter.com/share?text=Víctimas de abuso sexual por parte de sacerdotes católicos narran sus testimonios. %23PecadosImperdonables" data-via="larepublica_pe"><i class="fa fa-twitter fa-2x" aria-hidden="true"></i></a>
+      <a class="fb-share-button fb-icon popup-fb" href="javascript: void(0);" data-layout="button_count">
+        <i class="fa fa-facebook fa-2x" aria-hidden="true"></i>
+      </a>
     </span>
     <nav class="hk-navigation ease6">
-        <a class="hk-logo hk-desktop nav_logo">
-        <img src="./static/images/hacken-logo.png" alt="Hacken">
-        </a>
+        <!-- <a class="hk-logo hk-desktop nav_logo">
+        <img src="./static/images/hacken-logo.png" alt="Logo">
+        </a> -->
         <ul class="hk-nav-menu">
             <li>
             <div class="hk-nav-item">
@@ -112,12 +111,30 @@
             </li>
         </ul>
       </nav>
+      <h1 class="title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit, unde.</h1>
+      <h3 class="sub title">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto nam eos laborum voluptate quod! Autem cupiditate nisi ut natus iste!</h3>
   </div>
-  <div id="graphic">
+  <div id="about" class="about">
+    <div class="container">
+      <h2>About</h2>
+      <div class="row">
+        <div class="col m4">
+          <h3>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, veniam.</h3>
+        </div>
+        <div class="col m8">
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Velit fugit ea reiciendis atque, nam inventore cum sit commodi ut nulla? Vel a quisquam labore, non. Modi iusto dignissimos praesentium, alias, dolorum ullam ex, laboriosam voluptate numquam totam incidunt in, temporibus odio fugiat iure nihil enim molestias laborum similique debitis fugit.</p>
+          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sequi inventore ad provident voluptates consectetur. Expedita sed nulla debitis, quae? Praesentium iusto quod aliquid mollitia qui distinctio accusantium dolores, animi quidem unde. Consequuntur porro ipsum harum obcaecati voluptatibus, voluptate molestias, perspiciatis veritatis unde quia recusandae soluta odio in ea?</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="graphic-container">
+    <div id="graphic">
 
+    </div>
   </div>
   </div>
-  <script src="http://d3js.org/d3.v3.min.js"></script>
+  <script src="static/js/d3.js"></script>
   <script src="static/js/jquery-3.1.1.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
   <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"></script>

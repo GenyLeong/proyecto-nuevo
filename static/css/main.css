@@ -7080,6 +7080,11 @@ canvas {
   top: 5em;
   margin: 0 auto; }
 
+.sub {
+  font-size: 21px;
+  top: 9em;
+  width: 30em; }
+
 /*nav*/
 .hk-navigation {
   display: block;
@@ -7111,7 +7116,7 @@ canvas {
   .hk-nav-menu li {
     position: relative;
     text-align: right;
-    padding: 0.8rem 0; }
+    padding: 0.2rem 0; }
   .hk-nav-menu .hk-menu-circle {
     display: inline-block;
     position: absolute;
@@ -7153,17 +7158,31 @@ canvas {
   margin-right: 80px; }
   .hk-nav-item:hover {
     color: #31a4b2; }
-    .hk-nav-item:hover .hk-menu-circle::after {
-      content: " ";
-      position: absolute;
-      top: 3px;
-      left: 7px;
-      height: 1px;
-      width: 80px;
+    .hk-nav-item:hover .hk-menu-circle {
+      box-shadow: 0 0 0 6px rgba(49, 164, 178, 0.2);
       background: #31a4b2; }
+      .hk-nav-item:hover .hk-menu-circle::after {
+        content: " ";
+        position: absolute;
+        top: 3px;
+        left: 7px;
+        height: 1px;
+        width: 80px;
+        background: #31a4b2; }
+  .hk-nav-item .hk-menu-circle::after {
+    content: " ";
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    height: 1px;
+    width: 0;
+    background: #31a4b2;
+    transition: all 0.3s; }
   .hk-nav-item .hk-nav-item_name {
     visibility: visible;
     color: #777; }
+    .hk-nav-item .hk-nav-item_name:hover {
+      color: #31a4b2; }
 
 .hk-nav-item_name {
   visibility: hidden;
@@ -7174,6 +7193,26 @@ canvas {
 
 .ease6 {
   transition: all .7s ease; }
+
+.about {
+  transition: 1s;
+  opacity: 0;
+  margin-left: -100px;
+  visibility: hidden;
+  height: 0;
+  width: 100%; }
+
+.clicked {
+  visibility: visible;
+  opacity: 1;
+  display: inline-block;
+  transition: 1s;
+  margin-left: -10px;
+  height: auto; }
+
+#graphic-container {
+  width: 100%;
+  min-height: 500px; }
 
 .axis path,
 .axis line {

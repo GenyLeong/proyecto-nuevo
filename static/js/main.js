@@ -30,45 +30,76 @@ particlesJS.load('particles-js', './static/js/particles.json', function() {
       $(this).addClass("active");
     })
 
-    var height = 500;
+    function graphic(){
+      var height = 500;
 
-    var svg = d3.select("#graphic").append("svg")
-        .attr("width", altura)
-        .attr("height", height);
-    d3.csv("../static/documentos/encuesta.csv", function(d){
+      var svg = d3.select("#graphic").append("svg")
+      .attr("width", altura)
+      .attr("height", height);
+      d3.csv("../static/documentos/encuesta.csv", function(d){
 
         var r = d3.scale.linear()
         .domain([0, d3.max(d, function(d) { return parseFloat(d.Porcentaje); })])
         .range([40, 300]);
 
         svg.selectAll("rect")
-            .data(d)
-            .enter()
-            .append("rect")
-            .attr("x", function(d, i) {return i*50;})
-            .attr("y", 500)
-            .attr("width", 40)
-            .attr("height", 0)
-            .attr("fill", function(d){ return d3.rgb(d.Color).darker();})
-            .transition()
-                .duration(1000)
-                .delay(function(d, i){return i * 200;})
-                .ease("linear")
-                .attr("y", function(d) { return 500 - r(d.Porcentaje); })
-                .attr("height", function(d) { return r(d.Porcentaje); })
-                .attr("fill", function(d){ return d3.rgb(d.Color); });
+        .data(d)
+        .enter()
+        .append("rect")
+        .attr("x", function(d, i) {return i*70;})
+        .attr("y", 500)
+        .attr("width", 60)
+        .attr("height", 0)
+        .attr("fill", function(d){ return d3.rgb(d.Color).darker();})
+        .transition()
+        .duration(1000)
+        .delay(function(d, i){return i * 200;})
+        .ease("linear")
+        .attr("y", function(d) { return 500 - r(d.Porcentaje); })
+        .attr("height", function(d) { return r(d.Porcentaje); })
+        .attr("fill", function(d){ return d3.rgb(d.Color); });
 
         svg.selectAll(".partido")
-            .data(d)
-            .enter()
-            .append("text")
-            .attr("class","partido")
-            .text(function(d){return d.Partido;})
-            .attr("x", 0)
-            .attr("y", 0)
-            .attr("transform", function(d, i) {return "translate("+((i*50)+26)+",95) rotate(-90)";});
-        });
+        .data(d)
+        .enter()
+        .append("text")
+        .attr("class","partido")
+        .text(function(d){return d.Partido;})
+        .attr("x", 0)
+        .attr("y", 0)
+        .attr("transform", function(d, i) {return "translate("+((i*50)+26)+",95) rotate(-90)";});
+      });
+    }
+    // graphic()
+    var controller = new ScrollMagic.Controller(),
+        scene_1,
+        scene_2;
 
+  scene_1 = new ScrollMagic.Scene({
+    triggerElement: '#about',
+    triggerHook: 0.7
+  })
+  .addTo(controller)
+
+  scene_1.on("progress", function(event) {
+        $(".about").toggleClass("clicked")
+    })
+    .addTo(controller)
+
+
+  scene_2 = new ScrollMagic.Scene({
+                triggerElement: '#graphic-container',
+                triggerHook: 0.7,
+                reverse:false
+              })
+              .addIndicators()
+              .addTo(controller)
+
+  scene_2.on("start", function(event) {
+    console.log("leave")
+      graphic()
+    })
+    .addTo(controller);
 
 
 })

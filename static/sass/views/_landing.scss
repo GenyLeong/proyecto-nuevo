@@ -27,6 +27,11 @@ canvas {
   margin: 0 auto;
 }
 
+.sub{
+  font-size: 21px;
+  top: 9em;
+  width: 30em;
+}
 /*nav*/
 .hk-navigation {
     display: block;
@@ -63,7 +68,7 @@ canvas {
     li {
         position: relative;
         text-align: right;
-        padding: 0.8rem 0;
+        padding: 0.2rem 0;
     }
     .hk-menu-circle {
         display: inline-block;
@@ -117,6 +122,8 @@ canvas {
     &:hover{
       color: #31a4b2;
       .hk-menu-circle{
+        box-shadow: 0 0 0 6px rgba(49,164,178,0.2);
+        background: #31a4b2;
         &::after{
           content: " ";
           position: absolute;
@@ -128,9 +135,24 @@ canvas {
         }
       }
     }
+    .hk-menu-circle{
+      &::after{
+        content: " ";
+        position: absolute;
+        top: 3px;
+        left: 7px;
+        height: 1px;
+        width: 0;
+        background: #31a4b2;
+        transition: all 0.3s;
+      }
+    }
     .hk-nav-item_name{
       visibility: visible;
       color: #777;
+      &:hover{
+        color: #31a4b2;
+      }
     }
 }
 
@@ -149,6 +171,32 @@ canvas {
     -o-transition: all .7s ease;
     -ms-transition: all .7s ease;
     transition: all .7s ease;
+}
+
+.about {
+  -webkit-transition: 1s;
+  transition: 1s;
+  opacity:0;
+  margin-left:-100px;
+  visibility:hidden;
+  height:0;
+  width:100%
+}
+
+.clicked {
+  visibility: visible;
+  opacity: 1;
+  display: inline-block;
+  -webkit-transition: 1s;
+  transition: 1s;
+  margin-left: -10px;
+  height: auto;
+}
+
+
+#graphic-container{
+  width: 100%;
+    min-height: 500px;
 }
 
 .axis path,
