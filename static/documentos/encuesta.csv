@@ -1,7 +1,6 @@
-Partido,Porcentaje,Color
-UPyD,2,#d64b8c
-Ciudadanos,8,#e28535
-Otros,16,#e8e8e8
-PSOE,32,#ff2f2e
-Podemos,64,#82398a
-PP,128,#03a9e7
+Partido,Porcentaje,Color,Texto
+Primera etapa,2,#d64b8c,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, veniamuno"
+Segunda etapa,4,#e28535,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, veniam dos"
+Tercera etapa,8,#e8e8e8,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, veniam tres"
+Cuarta etapa,16,#ff2f2e,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, veniam cuatro"
+Quinta etapa,32,#82398a,"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus, veniam cinco"
