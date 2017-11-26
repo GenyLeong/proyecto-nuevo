@@ -2,9 +2,10 @@ $(document).ready(function() {
   "use strict";
 
   var altura = window.innerHeight;
-  var intro_altura = document.getElementById('particles-js')
-  intro_altura.style.height = altura + 'px';
+  /*var intro_altura = document.getElementById('fondo')
+  intro_altura.style.height = altura - 81 + 'px';*/
 
+  $(".height-js").css("height", altura)
   $('.smooth').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -18,11 +19,6 @@ $(document).ready(function() {
     }
   });
 
-  /* ---- particles.js config ---- */
-
-particlesJS.load('particles-js', './static/js/particles.json', function() {
-    console.log('callback - particles.js config loaded');
-  });
 
 
     $(".hk-nav-item").on("click", function(){

@@ -19,10 +19,6 @@ a{
   }
 }
 
-.mail-to{
-  color: $brown;
-}
-
 h2{
   font-family: $font_slabo;
 }
@@ -33,6 +29,10 @@ h3{
 }
 h5{
   font-family: $font_slabo ,serif;
+}
+
+nav{
+  box-shadow: none;
 }
 
 iframe{
@@ -50,6 +50,7 @@ iframe{
   width: 100%;
   display: block;
   z-index: 1000;
+  top: 0;
   .tw-icon {
       font-size: 18px;
       color: $white;
@@ -100,73 +101,8 @@ iframe{
   }
 }
 
-.btn-more{
-  position: relative;
-  padding: 4px;
-  background: #fff;
-  border: none;
-  color: #694a2a;
-  height: auto;
-  display: block;
-  border-radius: 3px;
-  text-align: center;
-  box-shadow: 0 2px 5px rgba(0,0,0,.4);
-  font-family: "Slabo 27px", serif;
-  font-size: 1.3rem;
-  width: 100%;
-  font-weight: 700;
-  margin: .9rem .1rem;
-  &:hover{
-    background: #694a2a;
-    color: #ffffff;
-  }
-  &:focus{
-    background: #fff;
-    border: none;
-    color: #694a2a;
-  }
-}
-
-hr {
-    border: 1px dashed;
-    position: absolute;
-    text-align: center;
-    margin-bottom: 3rem;
-    width: 100%;
-    bottom: -5%;
-    // &:after{
-    //   content:url(../images/iglesia.svg);
-    //   position: relative;
-    //   top: -24px;
-    //   display: inline-block;
-    //   width: 36px;
-    //   height: 49px;
-    //   padding: 0;
-    //   font-size: 12px;
-    //   line-height: 24px;
-    //   z-index: 38;
-    // }
-}
-
-#materialbox-overlay {
-    background-color: rgba(104, 71, 46, 0.87);
-
-}
-
-.materialbox-caption{
-    line-height: 80px;
-    padding: 0% 10%;
-    min-height: 50px;
-    font-size: 18px;
-    text-shadow: 0.8px 0.8px 1.2px #000000;
-}
-
-.mapboxgl-popup-content{
-  max-width: 200px;
-}
-
-.mf{
-      margin-top: 4rem;
+.pt{
+      padding-top: 12rem;
 }
 
 @media only screen and (min-width: 601px){
@@ -181,7 +117,7 @@ hr {
 
 @media only screen and (min-width: 993px){
   .container {
-      width: 50%;
+      width: 55%;
   }
   .container-footer {
       width: 70%;
