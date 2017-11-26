@@ -6883,7 +6883,8 @@ body {
   padding: 0;
   font-family: "Open Sans", sans-serif;
   font-weight: 300;
-  font-size: 1.1rem; }
+  font-size: 1.1rem;
+  overflow-x: hidden; }
 
 #map {
   z-index: -9999999999998;
@@ -7057,11 +7058,13 @@ video.fillWidth {
   display: block;
   position: fixed;
   right: 0;
-  top: 50px;
   z-index: 3;
   width: 220px;
   height: auto;
-  background-color: transparent; }
+  background-color: transparent;
+  -webkit-transform: translateY(100%);
+          transform: translateY(100%);
+  top: -50px; }
   .hk-navigation .hk-logo.nav_logo {
     left: auto;
     right: 80px;
@@ -7080,7 +7083,7 @@ video.fillWidth {
 
 .hk-nav-menu {
   list-style: none;
-  margin-top: 3rem;
+  /*   margin-top: 3rem; */
   padding-left: 0;
   /*     margin-right: 2.5rem; */ }
   .hk-nav-menu li {
@@ -7088,7 +7091,8 @@ video.fillWidth {
     text-align: right;
     padding: 0.2rem 0;
     float: none;
-    height: 42px; }
+    height: 32px;
+    line-height: 32px; }
     .hk-nav-menu li span {
       margin-right: 26px; }
     .hk-nav-menu li .fa-long-arrow-left {
@@ -7108,18 +7112,45 @@ video.fillWidth {
       margin-right: 6px; }
     .hk-nav-menu li:hover span {
       margin-right: 12px; }
+  .hk-nav-menu a:hover {
+    background-color: transparent; }
 
 #get {
-  margin-top: 2rem; }
+  /*  margin-top: 1rem; */ }
 
 .btn-agree {
   background-color: #F4D027;
   padding: 8px;
   text-shadow: 0.3px 0.3px 0.8px #fff;
-  color: black; }
+  color: black;
+  width: 120px;
+  display: block;
+  text-align: center;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  transition-duration: 0.3s;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform; }
   .btn-agree:hover {
     color: black;
-    text-decoration: none; }
+    text-decoration: none;
+    -webkit-transform: scale(0.9);
+    transform: scale(0.9); }
+
+#about {
+  text-align: justify;
+  background-color: #08437A;
+  color: #fff;
+  padding: 2rem; }
+  #about h3 {
+    letter-spacing: 1px;
+    line-height: 30px;
+    font-size: 25px;
+    text-align: left;
+    color: #E2A900; }
 
 /*   .hk-menu-circle {
         display: inline-block;
@@ -7216,7 +7247,7 @@ video.fillWidth {
 .ease6 {
   transition: all .7s ease; }
 
-.about {
+.about-content {
   transition: 1s;
   opacity: 0;
   margin-left: -100px;
@@ -7227,9 +7258,9 @@ video.fillWidth {
 .clicked {
   visibility: visible;
   opacity: 1;
-  display: inline-block;
+  /* display: inline-block; */
   transition: 1s;
-  margin-left: -10px;
+  margin-left: 0px;
   height: auto; }
 
 #graphic-container {

@@ -2,10 +2,32 @@ $(document).ready(function() {
   "use strict";
 
   var altura = window.innerHeight;
+  var ancho = window.innerWidth;
   /*var intro_altura = document.getElementById('fondo')
   intro_altura.style.height = altura - 81 + 'px';*/
 
-  $(".height-js").css("height", altura)
+  if (ancho > 600){
+    $(".height-js").css("height", altura)    
+  }
+
+  else{
+    $(".height-js").css("height", "auto") 
+  }
+
+  $( window ).scroll(function() {
+    if ($(this).scrollTop() > altura -2) {
+      $( "nav ul li" ).css({
+          "color": "#2d2d2d"
+      }).fadeIn(3000);
+    }
+
+    else{
+      $( "nav ul li" ).css({
+          "color": "#fff"
+        }).fadeIn("slow");
+    }
+  });
+
   $('.smooth').click(function() {
     if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
       var target = $(this.hash);
@@ -116,7 +138,7 @@ function graphic(){
   .addTo(controller)
 
   scene_1.on("progress", function(event) {
-        $(".about").toggleClass("clicked")
+        $(".about-content").toggleClass("clicked")
     })
     .addTo(controller)
 
