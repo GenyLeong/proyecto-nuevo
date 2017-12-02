@@ -76,7 +76,7 @@ video.fillWidth {
 
 .hk-nav-menu {
     list-style: none;
-  /*   margin-top: 3rem; */
+  /* e */
     padding-left: 0;
 /*     margin-right: 2.5rem; */
     li {
@@ -129,9 +129,11 @@ video.fillWidth {
   #get{
        /*  margin-top: 1rem; */
   }
+  
+  
 
   .btn-agree{
-    background-color: #F4D027;
+    background-color: #E2A900;
     padding: 8px;
     text-shadow: 0.3px 0.3px 0.8px #fff;
     color: black;
@@ -167,6 +169,152 @@ video.fillWidth {
       color: #E2A900;
     }
   }
+
+  .mision-content{
+    opacity: 0;
+    -webkit-transition: opacity 2s ease-in;
+    -o-transition: opacity 2s ease-in;
+    transition: opacity 2s ease-in;
+  }
+  
+  #roadmap{
+    .container-fluid, .row{
+      margin: 0 auto;
+      width: 100%;
+      height: 100%;
+    }
+    .item{
+      position: relative;
+      float: left;
+      height: 50%;
+      width: 25%;
+      cursor: pointer;
+      overflow: hidden;
+      -webkit-transition: all .25s ease-in-out;
+      transition: all .25s ease-in-out;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      background-color: rgba(8, 67, 122, 0.88);
+      border-right: 1px solid;
+      border-bottom: 1px solid;
+      .item__content{
+        position: relative;
+        width: 120px;
+        height: 120px;
+        .fa{
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            margin-left: 25%;
+            width: 30px;
+            transform: translate(50%, 50%);
+        }
+      }
+    }
+  }
+
+  .modal-start {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: rgba(23, 21, 21, 0.8);
+    z-index: 6000;
+    text-align: center;
+    display: none;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+
+    .modal-cont{
+      max-width: 550px;
+      // margin: 10% auto;
+      background-color: #fff;
+      padding: 35px;
+      border-radius: 3px;
+     border: 1px solid #D8D8D8; 
+      position: relative;
+      height: auto;
+      -webkit-animation-name: animatetop;
+      -webkit-animation-duration: 0.4s;
+      animation-name: animatetop;
+      animation-duration: 0.4s;
+      
+      .border{
+       /*  border: 1px solid black; */
+        padding: 14px;
+        position: relative;
+        border-left: 1px solid black;
+        &:before, &:after{
+            content:'';
+            position:absolute;
+            right:0%; 
+            left:0;
+            height:50px;
+            border-right:1px solid #000;
+        }
+
+        &:before{
+          top: 0;
+          border-top: 1px solid #000;
+          height: 77%;
+        }
+
+        &:after{
+          bottom: 0;
+          border-bottom: 1px solid #000;
+          height: 0px;
+          right: 1.3rem;
+        }        
+    }
+
+      .modal-detail{
+          width: 25px;
+          transform: rotateZ(25deg);
+          position: absolute;
+          bottom: 13%;
+          right: 4.5%;
+      }
+
+    }
+
+    @-webkit-keyframes animatetop {
+      from {top: -300px; opacity: 0}
+      to {top: 0; opacity: 1}
+    }
+
+    @keyframes animatetop {
+      from {top: -300px; opacity: 0}
+      to {top: 0; opacity: 1}
+    }
+
+    .modal-close{
+      display: inline-flex;
+      position: absolute;
+      top: -2rem;
+      font-size: 2rem;
+      width: 30px;
+      height: 30px;
+      background-color: black;
+      color: white;
+      border-radius: 50%;
+      right: 0%;
+      transform: translate(50%, 50%);
+      padding: 4px 7px;
+      cursor: pointer;
+      .fa{
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  
+  
 
   /*   .hk-menu-circle {
         display: inline-block;

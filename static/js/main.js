@@ -128,7 +128,8 @@ function graphic(){
 
     var controller = new ScrollMagic.Controller(),
         scene_1,
-        scene_2;
+        scene_2,
+        scene_3;
 
   scene_1 = new ScrollMagic.Scene({
     triggerElement: '#about',
@@ -144,6 +145,20 @@ function graphic(){
 
 
   scene_2 = new ScrollMagic.Scene({
+    triggerElement: '#mision',
+    triggerHook: 0.5,
+
+  })
+  .addIndicators()
+  .addTo(controller)
+
+  scene_2.on("start", function(event) {
+        $(".mision-content").css("opacity", 1)
+    })
+    .addTo(controller)
+
+
+  scene_3 = new ScrollMagic.Scene({
                 triggerElement: '#graphic-container',
                 duration: 300,
                 triggerHook: 0.5,
@@ -153,9 +168,44 @@ function graphic(){
               .addIndicators()
               .addTo(controller)
 
-  scene_2.on("enter", graphic)
+  scene_3.on("enter", graphic)
     .addTo(controller);
 
+  $(".one").click(function(){
+        $(".start-one").css("display", "flex")
+  });
+
+  $(".two").click(function(){
+        $(".start-two").css("display", "flex")
+  });
+
+  $(".three").click(function(){
+        $(".start-three").css("display", "flex")
+  });
+
+  $(".four").click(function(){
+        $(".start-four").css("display", "flex")
+  });
+
+  $(".five").click(function(){
+        $(".start-five").css("display", "flex")
+  });
+
+  $(".six").click(function(){
+        $(".start-six").css("display", "flex")
+  });
+
+  $(".seven").click(function(){
+        $(".start-seven").css("display", "flex")
+  });
+
+  $(".eight").click(function(){
+        $(".start-eight").css("display", "flex")
+  });
+
+  $(".modal-close").click(function(){
+        $(".modal-start").fadeOut()
+  })
 
 })
 
